@@ -1,0 +1,42 @@
+.most-see-product{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    .most-see-product-item{
+        align-items: center;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .most-card-item{
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+        padding: 20px;
+        strong{
+           display: inline-block;
+           color: dodgerblue;
+        }
+
+        button{
+            padding: 10px 50px;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: dodgerblue;
+            border: none;
+            position: absolute;
+            bottom: 10px;
+        }
+
+    }
+    img{    
+        width: 200px;
+        aspect-ratio: 1/1;
+    }
+}
+
+
