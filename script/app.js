@@ -1,10 +1,10 @@
 const cardsWrapper = document.querySelector(".most-see-product");
 
 
-fetch('https://fakestoreapi.com/products')
+fetch('https://dummyjson.com/products')
     .then(res=>res.json())
     .then(data=>{
-        renderData(data)
+        renderData(data.products)
     })
 
 function renderData(data){
@@ -15,11 +15,11 @@ function renderData(data){
         div.classList = "most-see-product-item"
 
         div.innerHTML = `
-            <img src="${el.image}"  alt="image" />
+            <img src="${el.images[0]}"  alt="image" />
             <div class="most-card-item">
                 <strong>$${el.price}</strong>
                 <p>${el.title.slice(0,20)}</p>
-                <p>${el.rating.count}</p>
+                <p>${el.stock}</p>
                 
                 <button>Sotib olish</button>
             </div>
