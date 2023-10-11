@@ -10,8 +10,10 @@
         display: flex;
         flex-direction: column;
         position: relative;
+        padding-top: 20px;
     }
     .most-card-item{
+        width: 90%;
         display: flex;
         flex-direction: column;
         gap: 10px 0;
@@ -20,9 +22,11 @@
            display: inline-block;
            color: dodgerblue;
         }
-
+        p:nth-child(3){
+            margin-bottom: 40px;
+        }
         button{
-            padding: 10px 50px;
+            padding: 10px;
             color: #fff;
             font-size: 18px;
             border-radius: 5px;
@@ -30,12 +34,19 @@
             border: none;
             position: absolute;
             bottom: 10px;
+            transition: .3s;
+            &:active{
+                opacity: .9;
+                transform: scale(.9);
+            }
         }
+
 
     }
     img{    
         width: 200px;
-        aspect-ratio: 1/1;
+        height: 180px;
+        // aspect-ratio: 1/1;
     }
 }
 
