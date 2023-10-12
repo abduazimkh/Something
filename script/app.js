@@ -4,16 +4,43 @@ const cardsWrapper = document.querySelector(".most-see-product");
 
 // let b = a.Math.trunc([Math.random() * a.length])
 
+const form = document.querySelector("#form"),
+    searchInput = form.querySelector("#search"),
+    searchButton = form.querySelector(".search-button");
+
+// form.addEventListener("submit", (e) =>{
+//     e.preventDefault();
+
+//     if(searchInput.value){
+
+//     }
+// })
+
+searchInput.addEventListener('input', (e) => {
+        
+    fetch(`https://dummyjson.com/products/search?q=${e.target.value}`)
+    .then(res => res.json())
+    .then(data => 
+        {
+            renderData(data)
+        });
+
+
+})
+
+
+
 fetch('https://dummyjson.com/products')
     .then(res=>res.json())
     .then(data=>{
         renderData(data.products)
-    })
+})
 
 function renderData(data){
+    cardsWrapper.innerHTML = '';
     const cardsFragment = document.createDocumentFragment();
     data.forEach((el, i) => {
-        console.log(el);
+        // console.log(el);
         const div = document.createElement("div")
         div.classList = "most-see-product-item"
 
@@ -34,3 +61,10 @@ function renderData(data){
     })
     cardsWrapper.appendChild(cardsFragment)
 }
+
+
+
+
+// fetch('https://dummyjson.com/products/categories')
+// .then(res => res.json())
+// .then(data => console.log(data));

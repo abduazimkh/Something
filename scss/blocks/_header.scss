@@ -28,6 +28,12 @@ body{
 
 header{
     background-color: #ffffff;
+    margin-bottom: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 24;
+
 }
 
 .nav__wrapper{
@@ -35,7 +41,7 @@ header{
     align-items: center;
     gap: 123px;
     padding: 13px;
-    margin-bottom: 40px;
+
 }
 
 .nav__menu{
