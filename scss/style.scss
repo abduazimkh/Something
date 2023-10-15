@@ -3,10 +3,10 @@
 @import './blocks/header';
 @import './blocks/blocks';
 
-
 body{
     background-color: #ECF4FF;
     font-family: sans-serif;
     font-size: 18px;
     line-height: 20px;
+    box-sizing: border-box;
 }
