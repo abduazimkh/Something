@@ -19,6 +19,9 @@ html,
       height: 380px;
       border-radius:20px;
     }
+    .mySwiper2{
+      height: 260px;
+    }
 
     .swiper-slide {
       text-align: center;
