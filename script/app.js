@@ -59,7 +59,7 @@ function renderData(data){
         `;
         cardsFragment.appendChild(div)
     })
-    cardsWrapper.appendChild(cardsFragment)
+    cardsWrapper.appendChild(cardsFragment) 
 }
 
 
