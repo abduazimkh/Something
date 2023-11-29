@@ -129,6 +129,8 @@ footer {
   .footer__nav{
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
     p{
         font-weight: 600;
         font-size: 18px;
@@ -160,4 +162,48 @@ footer {
     i:hover{
         color:#4d5ef6
     }
+}
+
+
+@media screen and (max-width: 1300px) {
+
+  main {
+    .brend__cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .most-see-product{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .nav__wrapper{
+    justify-content: center;
+  }
+  .nav__menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  main {
+    .brend__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .most-see-product{
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    .brend__cards {
+      grid-template-columns: 1fr;
+    }
+  }
 }
